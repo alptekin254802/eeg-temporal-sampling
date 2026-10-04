@@ -1,8 +1,8 @@
 cff-version: 1.2.0
-message: "Please cite this computational companion and the source datasets when using the code or data."
+message: "Please cite this software and the source datasets when using the code or data."
 type: software
 title: "Temporal Sampling Geometry and Participant-Level Reproducibility in Fixed-Duration Resting EEG"
-version: "2026.10.04"
+repository-code: "https://github.com/alptekin254802/eeg-temporal-sampling"
 authors:
   - family-names: Cinbat
     given-names: Alptekin

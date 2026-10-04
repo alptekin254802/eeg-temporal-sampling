@@ -91,4 +91,4 @@ The primary data are [Wascher and colleagues, OpenNeuro ds005385 v1.0.3](https:/
 
 ## License and citation
 
-Analysis software and documentation use the [MIT License](LICENSE). Dataset attribution and scope are described in [DATA_LICENSE.md](DATA_LICENSE.md). Cite this companion using [CITATION.cff](CITATION.cff) or [CITATION.md](CITATION.md). The companion version is **2026.10.04**.
+Analysis software and documentation use the [MIT License](LICENSE). Dataset attribution and scope are described in [DATA_LICENSE.md](DATA_LICENSE.md). For software citation, see [CITATION.cff](CITATION.cff) or [CITATION.md](CITATION.md).

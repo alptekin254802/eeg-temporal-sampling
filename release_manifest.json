@@ -30,12 +30,12 @@
       "sha256": "5ab05f548328863dd73c057cc6bde305fc62a87522b3f28eadb9bbdd3b1409be"
     },
     "CITATION.cff": {
-      "bytes": 443,
-      "sha256": "59e31221eb2ff1d67b1a043bb5e8c35f33f4e61d6b06979add2d3a10267fcd31"
+      "bytes": 494,
+      "sha256": "e591782a575f1a0f71f9ae3a8826c4d8ef43ddedb2738086388fb03a4718c1dd"
     },
     "CITATION.md": {
-      "bytes": 703,
-      "sha256": "ea33a5897183589c774c2ca141ef2f51c28127bb6b9b9e9d71a42a0c8fa588b0"
+      "bytes": 550,
+      "sha256": "38f26d2dc5285f4847d18666a3d231de5671bf7f8ae8aaac28e5fc7ae903da46"
     },
     "data/ds004148/dataset_description.json": {
       "bytes": 727,
@@ -106,8 +106,8 @@
       "sha256": "cd6c87250b08a647814867e67f800d9c208ec66f78ae53b35d260d0352a3287a"
     },
     "README.md": {
-      "bytes": 7930,
-      "sha256": "e25cd2938ceaed352c4f190f0ab19151619f6c06235d2ffa7990f42b4fc858c8"
+      "bytes": 7984,
+      "sha256": "83773ad52f38677a61f8e47718eafaea5c262714e0a941a66ac8195452075359"
     },
     "requirements.txt": {
       "bytes": 58,
@@ -207,7 +207,5 @@
     }
   },
   "updated_utc": "2026-10-04",
-  "revision_note": "Reader-facing sampling labels updated; scientific algorithms, code/data identifiers and accepted result arrays unchanged.",
-  "supporting_project": "https://osf.io/g2apc/",
-  "version": "2026.10.04"
+  "supporting_project": "https://osf.io/g2apc/"
 }
