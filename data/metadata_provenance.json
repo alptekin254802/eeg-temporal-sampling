@@ -1,0 +1,26 @@
+[
+  {
+    "dataset": "ds005385",
+    "source_tsv_sha256": "945841a49ec26c58b82644cdfa07ec2635dc9fa46b0ba17c873c20f1c534f730",
+    "source_dictionary_sha256": "ce8aebc5383bd354ce949a22a180b2ca1c8808896f707fa9fe13d2d04db7357a",
+    "released_fields": [
+      "participant_id",
+      "age",
+      "sex"
+    ],
+    "selection": "primary_participant_ids",
+    "released_tsv_sha256": "bfd16d8000ec18a0cbc7a41c473809b5f37e27b238d6b0237b5fafbeb4e8ce3e"
+  },
+  {
+    "dataset": "ds004148",
+    "source_tsv_sha256": "fefc3a5b0c4a28d3cb5370bb1d0ac9be2565ad70dbe8f94c82ff619460b01521",
+    "source_dictionary_sha256": "8f4428f6eec77e1ce08b20cc858331433b029cc71761324d15996daddbefb451",
+    "released_fields": [
+      "participant_id",
+      "age",
+      "sex"
+    ],
+    "selection": "replication_participant_ids",
+    "released_tsv_sha256": "7cd3ba97a0edbbe700c0ea98a236384185f0f9b4eb9f5940df41820eda2b5735"
+  }
+]

@@ -1,0 +1,163 @@
+{
+  "DIRECTIONAL_REPLICATION": {
+    "bootstrap_index_sha256": "d8e6640a52533bf82831d797d99f3be7e76ca1cd17e71b30880847313e091606",
+    "dataset": "ds004148_v1.0.0_session1_eyesclosed",
+    "delta_z_F10_minus_C": 0.44318105639858874,
+    "directional_interpretation": "descriptive_directional_concordance",
+    "mean_fisher_z": {
+      "C": 1.140203695724163,
+      "F10": 1.5833847521227518,
+      "F5": 1.4767525005299382
+    },
+    "monte_carlo_standard_error": 0.014614636975556638,
+    "participant_ids": [
+      "sub-01",
+      "sub-02",
+      "sub-03",
+      "sub-04",
+      "sub-05",
+      "sub-06",
+      "sub-07",
+      "sub-08",
+      "sub-09",
+      "sub-10",
+      "sub-11",
+      "sub-12",
+      "sub-13",
+      "sub-14",
+      "sub-15",
+      "sub-16",
+      "sub-17",
+      "sub-18",
+      "sub-19",
+      "sub-20",
+      "sub-21",
+      "sub-22",
+      "sub-23",
+      "sub-24",
+      "sub-25",
+      "sub-26",
+      "sub-27",
+      "sub-28",
+      "sub-29",
+      "sub-30",
+      "sub-31",
+      "sub-32",
+      "sub-33",
+      "sub-34",
+      "sub-35",
+      "sub-36",
+      "sub-37",
+      "sub-38",
+      "sub-39",
+      "sub-40",
+      "sub-41",
+      "sub-42",
+      "sub-44",
+      "sub-45",
+      "sub-46",
+      "sub-47",
+      "sub-48",
+      "sub-49",
+      "sub-50",
+      "sub-51",
+      "sub-52",
+      "sub-53",
+      "sub-54",
+      "sub-55",
+      "sub-56",
+      "sub-57",
+      "sub-58",
+      "sub-59",
+      "sub-60"
+    ],
+    "participant_n_after_time_domain_qc": 59,
+    "participant_rank_reproducibility": {
+      "C": 0.8144826727847853,
+      "F10": 0.9191288510480916,
+      "F5": 0.9008577667651775
+    },
+    "percentile_95_interval": [
+      0.23855728419949332,
+      0.5902983787001105
+    ],
+    "pooling_with_primary": false,
+    "schedule_shape": [
+      59,
+      3,
+      200,
+      2,
+      10
+    ]
+  },
+  "PRESPECIFIED_DESCRIPTIVE_SECONDARY": {
+    "F5": {
+      "mean_fisher_z": 1.9272565267319925,
+      "participant_rank_reproducibility": 0.9585110656428035,
+      "role": "ordered_descriptive_middle_point"
+    },
+    "absolute_displacement": {
+      "bootstrap_index_sha256": "aac06aa7fed9b0f0eb5b5d1bad1e6e87d43db823bf7026a10e3c1803707f546e",
+      "cohort_mean": 0.005843650550668098,
+      "matched_differences_per_participant": 400,
+      "participant_n": 531,
+      "percentile_95_interval": [
+        0.0015860037194996778,
+        0.01012751613724536
+      ]
+    }
+  },
+  "PRESPECIFIED_SENSITIVITY": {
+    "bootstrap_index_sha256": "fc3b19a3012189f331b21f8cb5e1bfbd56283f76f24630765a9ea60309331ed7",
+    "dataset": "ds005385_v1.0.3",
+    "delta_z_F10_minus_C": 0.304457408283818,
+    "mean_fisher_z": {
+      "C": 1.6754351068025801,
+      "F10": 1.9798925150863982
+    },
+    "monte_carlo_standard_error": 0.004066037156964197,
+    "participant_n": 516,
+    "participant_rank_reproducibility": {
+      "C": 0.9322666410908824,
+      "F10": 0.9625790870545489
+    },
+    "percentile_95_interval": [
+      0.2435423229947954,
+      0.35461457332733365
+    ],
+    "schedule_source": "direct_subset_of_registered_N531_schedule"
+  },
+  "PRIMARY": {
+    "bootstrap_index_sha256": "aac06aa7fed9b0f0eb5b5d1bad1e6e87d43db823bf7026a10e3c1803707f546e",
+    "dataset": "ds005385_v1.0.3",
+    "delta_z_F10_minus_C": 0.3130672819355893,
+    "mean_fisher_z": {
+      "C": 1.6675487231448323,
+      "F10": 1.9806160050804218
+    },
+    "monte_carlo_standard_error": 0.004021215077526616,
+    "participant_n": 531,
+    "participant_rank_reproducibility": {
+      "C": 0.9312268566348489,
+      "F10": 0.9626321842587631
+    },
+    "percentile_95_interval": [
+      0.25172136068651313,
+      0.3661860943222055
+    ]
+  },
+  "registration": {
+    "date": "2026-08-30",
+    "osf_id": "nh4d8"
+  },
+  "result_artifact": {
+    "bytes": 8296893,
+    "path": "scientific_results.npz",
+    "sha256": "f0b0ec15935aa00d8120150e7eea01e59d50e3fb45a83ad63ce6d1aa5f66ae78"
+  },
+  "uncertainty": {
+    "interval": "two_sided_95_percentile_numpy_method_linear",
+    "mcse_reported_separately": true,
+    "participant_bootstrap_resamples": 5000
+  }
+}

@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "title": "Temporal Sampling Geometry and Participant-Level Reproducibility in Fixed-Duration Resting EEG",
+  "artifact_scope": "Computational companion with selected derived results and demographic metadata",
+  "created_utc": "2026-09-20T21:16:22.212392+00:00",
+  "registration": "https://osf.io/nh4d8/",
+  "reference_environment": {
+    "python": "3.14.3",
+    "numpy": "2.3.4",
+    "scipy": "1.16.3",
+    "mne": "1.10.2",
+    "matplotlib": "3.10.7"
+  },
+  "numerical_comparison": {
+    "absolute_tolerance": 1e-12,
+    "relative_tolerance": 0,
+    "identifiers_and_schedules": "exact"
+  },
+  "files": {
+    ".gitattributes": {
+      "bytes": 93,
+      "sha256": "c99ffa32a8dc45777342201b67f07672d72d8bf3a4715ede4c8335b2e5a2f9be"
+    },
+    ".gitignore": {
+      "bytes": 84,
+      "sha256": "240b5bee339d2b20367ca8e292c77ad087e81a16f93c464c6478b162c1b1bef3"
+    },
+    ".python-version": {
+      "bytes": 7,
+      "sha256": "5ab05f548328863dd73c057cc6bde305fc62a87522b3f28eadb9bbdd3b1409be"
+    },
+    "CITATION.cff": {
+      "bytes": 443,
+      "sha256": "59e31221eb2ff1d67b1a043bb5e8c35f33f4e61d6b06979add2d3a10267fcd31"
+    },
+    "CITATION.md": {
+      "bytes": 703,
+      "sha256": "ea33a5897183589c774c2ca141ef2f51c28127bb6b9b9e9d71a42a0c8fa588b0"
+    },
+    "data/ds004148/dataset_description.json": {
+      "bytes": 727,
+      "sha256": "bcbc4f1e38f80d41a554e6a466c4678e468d36b1447b62a833b4b6691d1f662d"
+    },
+    "data/ds004148/participants.json": {
+      "bytes": 241,
+      "sha256": "402f0ec13bcabdfbdec25f3f92d43ec93fb531eb8b10be183c5059aec5fb9586"
+    },
+    "data/ds004148/participants.tsv": {
+      "bytes": 731,
+      "sha256": "7cd3ba97a0edbbe700c0ea98a236384185f0f9b4eb9f5940df41820eda2b5735"
+    },
+    "data/ds005385/dataset_description.json": {
+      "bytes": 1807,
+      "sha256": "8c6e3312796ab681ab02a418228b2322d8f466c208d22ea96190bcff6f7fcbfa"
+    },
+    "data/ds005385/participants.json": {
+      "bytes": 207,
+      "sha256": "a84c860d02e22fa773842d32e62b35b5602a3779a9cd56074aeef429b4692945"
+    },
+    "data/ds005385/participants.tsv": {
+      "bytes": 6926,
+      "sha256": "bfd16d8000ec18a0cbc7a41c473809b5f37e27b238d6b0237b5fafbeb4e8ce3e"
+    },
+    "data/metadata_provenance.json": {
+      "bytes": 903,
+      "sha256": "22672abbe2941e3ff033a15e7d42670e4638ded764a5df388ba6e7ae17676244"
+    },
+    "DATA_LICENSE.md": {
+      "bytes": 851,
+      "sha256": "100ccfe1317da1912f4501635939484a175c3f4a3adabbe3b7cb21a5177766b6"
+    },
+    "docs/DATA_ACCESS.md": {
+      "bytes": 2906,
+      "sha256": "eea8ba61981b9726cf09dcf978e427fa2a459cab7fd9cefc0061035cb208ab05"
+    },
+    "docs/exploratory/analysis_plan_2026-09-20.json": {
+      "bytes": 1745,
+      "sha256": "2d365a36e5d49ec06a9ae87f8fcea20f736b43c90e7d6b931e9dd88f32eeb3f4"
+    },
+    "LICENSE": {
+      "bytes": 1068,
+      "sha256": "ff54d3fa03d2de1304d917c97984c34246f477b9e9bac0acdc85a43ab5af0cb3"
+    },
+    "osf_upload_package/analysis_specification.yaml": {
+      "bytes": 8697,
+      "sha256": "b01b98a0c03f6c36b1230d13ce88b1fe41bea897460f30e0f123cd38d60b5455"
+    },
+    "osf_upload_package/DS005385_PARTICIPANT_CENSUS.csv": {
+      "bytes": 262046,
+      "sha256": "90f425ba446daac8db3daa73e23035d4a6e9f6efc3a232671efad16cdfd04c82"
+    },
+    "osf_upload_package/scripts/sampling_design.py": {
+      "bytes": 4486,
+      "sha256": "d55ebefd87d32fee3ed48cbd45fabc3991041d1985792f60d7bcd0a6f9d0f445"
+    },
+    "osf_upload_package/structural/ds005385_qc_results.csv": {
+      "bytes": 57716,
+      "sha256": "4b9b8ac7e7d9622247e8502ff82fb80f1a6eda7d9a2a8c269231c5e73503d797"
+    },
+    "osf_upload_package/structural/ds005385_sampling_schedule.npz": {
+      "bytes": 1936496,
+      "sha256": "95c0da1f105ff9f92a64010d120b8ebecc760c75540b448f209dc391e91649c1"
+    },
+    "osf_upload_package/tests/test_psd_equivalence.py": {
+      "bytes": 4270,
+      "sha256": "cd6c87250b08a647814867e67f800d9c208ec66f78ae53b35d260d0352a3287a"
+    },
+    "README.md": {
+      "bytes": 7930,
+      "sha256": "e25cd2938ceaed352c4f190f0ab19151619f6c06235d2ffa7990f42b4fc858c8"
+    },
+    "requirements.txt": {
+      "bytes": 58,
+      "sha256": "0994a7ec838ec825f3db2d354a07c63d7d1d5fad39f8ba863467292a9681e9f9"
+    },
+    "results/exploratory_2026-09-20/cell_band_powers.npz": {
+      "bytes": 1496129,
+      "sha256": "2725cbb838cae2bfe58dd4e74ffcf1bf3f783e1ee7e631410716e5718f26f6d0"
+    },
+    "results/exploratory_2026-09-20/order_permutations.npz": {
+      "bytes": 2774931,
+      "sha256": "ff5fb3e5abba4cc197faeb300ca73f306c68c4ae169b00584c6c0950c7d5289b"
+    },
+    "results/exploratory_2026-09-20/simulation_results.npz": {
+      "bytes": 17587141,
+      "sha256": "6a057f167eec1223e94e7c5ce346cdc8a1b84bc35711b6bcb0da9aafbc05f490"
+    },
+    "results/exploratory_2026-09-20/summary_results.json": {
+      "bytes": 6961,
+      "sha256": "0a012103d45e6d8e7610cad26a9f6cae48579990f9e9290c3acaf11e19954df7"
+    },
+    "results/preregistered/replication_qc_roster.csv": {
+      "bytes": 4851,
+      "sha256": "3351db4893790190f163191ef7fbc1dd819e76a145960187a574fca2580fbbdb"
+    },
+    "results/preregistered/scientific_results.npz": {
+      "bytes": 8296893,
+      "sha256": "f0b0ec15935aa00d8120150e7eea01e59d50e3fb45a83ad63ce6d1aa5f66ae78"
+    },
+    "results/preregistered/summary_results.json": {
+      "bytes": 4250,
+      "sha256": "fcff812fa2b17df723e205e0412dfed170e1b3b0093f8120b83c794e7ed6affa"
+    },
+    "scripts/compare_npz.py": {
+      "bytes": 1240,
+      "sha256": "dde760c75aa4f07f9778701e6c909d58512f2cf6df562d6f9baacb33c1d24df9"
+    },
+    "scripts/exploratory_sampling.py": {
+      "bytes": 5141,
+      "sha256": "2868a4524b53fa6025369b7b3884327a1c128f8bc27d4c838a0ff553b24def9e"
+    },
+    "scripts/make_exploratory_figures.py": {
+      "bytes": 7280,
+      "sha256": "407ca0cbf9cbb175864f1e6a8a79373120c0ab85cab58bfe6c0555a6430628ae"
+    },
+    "scripts/make_figures.py": {
+      "bytes": 9466,
+      "sha256": "29f4ee3e40939d9f19ece55bea0d215c80c4ee30962697a84b1b33db15ba65ca"
+    },
+    "scripts/make_tables.py": {
+      "bytes": 5981,
+      "sha256": "78eea210b07f9d088ab1137143328e02d1b8233dccc5e7f5317db3d2ee4563f9"
+    },
+    "scripts/preregistered_analysis.py": {
+      "bytes": 17250,
+      "sha256": "2df364f98892a5ea4712aa896c54d62593bd4144df8eeaff5c0ef1445a21ef5c"
+    },
+    "scripts/reproduce_inputs.py": {
+      "bytes": 2459,
+      "sha256": "0ccd195d8ab4133afb56ae3f78cb6e387d2399b6aa06a23ebc5196b24d4c0f6e"
+    },
+    "scripts/run_exploratory_analysis.py": {
+      "bytes": 5646,
+      "sha256": "4b645af262ebb0b18df8d820c6a84dad92f3b7db308411ed0a0f12e7a1acff5f"
+    },
+    "scripts/run_preregistered_analysis.py": {
+      "bytes": 24422,
+      "sha256": "354862f4b8e99b7865c6afa2040d9f20354df398a45c93bd24eb575160f2f781"
+    },
+    "scripts/sampling_design.py": {
+      "bytes": 4486,
+      "sha256": "d55ebefd87d32fee3ed48cbd45fabc3991041d1985792f60d7bcd0a6f9d0f445"
+    },
+    "scripts/verify_release.py": {
+      "bytes": 811,
+      "sha256": "5e7f869faa03cbd2d3abc567094774e69c8717ab8ad6035a87c6074303e5736e"
+    },
+    "scripts/verify_results.py": {
+      "bytes": 7625,
+      "sha256": "208086268733d84f6417a559181025dba83adc0c056546b65d8b8d13565e256d"
+    },
+    "structural/ds004148_session1_census.csv": {
+      "bytes": 10206,
+      "sha256": "ac76412b073040859ac382ec978a0835e40860f2a2bfce1dbab54e7e2efd5971"
+    },
+    "tests/test_exploratory_sampling.py": {
+      "bytes": 4428,
+      "sha256": "3080d457f5678dad58f79102ccfde20a127ba062b308c4133896329583279034"
+    },
+    "tests/test_preregistered_analysis.py": {
+      "bytes": 10851,
+      "sha256": "ac206443f03aca045e2c01c43be3b1a71dc93bf4c0b36eb3e2e08c18a10ccef1"
+    },
+    "tests/test_psd_equivalence.py": {
+      "bytes": 4270,
+      "sha256": "cd6c87250b08a647814867e67f800d9c208ec66f78ae53b35d260d0352a3287a"
+    }
+  },
+  "updated_utc": "2026-10-04",
+  "revision_note": "Reader-facing sampling labels updated; scientific algorithms, code/data identifiers and accepted result arrays unchanged.",
+  "supporting_project": "https://osf.io/g2apc/",
+  "version": "2026.10.04"
+}

@@ -1,0 +1,38 @@
+{
+  "status": "exploratory_planned_after_preregistered_results_were_known",
+  "date": "2026-09-20",
+  "plan_version": "1.0",
+  "cohort": "ds005385_v1.0.3_registered_complete_support_N516",
+  "schedule": "unchanged_registered_complete_support_subset_C_and_F10",
+  "participants": 516,
+  "cells": 42,
+  "cell_seconds": 4,
+  "cells_per_arm": 10,
+  "draws": 200,
+  "order_permutations": 1000,
+  "simulation_repetitions_per_scenario": 500,
+  "simulation_model": {
+    "level": "cell_band_powers_not_raw_EEG",
+    "mean_logit": -1.0,
+    "between_participant_sd": [0.5, 1.0],
+    "within_participant_stationary_sd": 1.0,
+    "ar_coefficients": [0.0, 0.5, 0.9],
+    "slope_sd": [0.0, 2.0],
+    "time_grid": "42_equally_spaced_points_from_minus_0.5_to_plus_0.5",
+    "initialization": "exact_stationary_N_0_1_at_cell_0",
+    "total_power_log_sd": 0.25,
+    "total_power_process": "independent_lognormal_per_participant_and_cell",
+    "common_random_numbers_across_scenarios_within_repetition": true
+  },
+  "rng": {
+    "generator": "numpy_Generator_PCG64",
+    "seed_derivation": "first_8_bytes_SHA256_big_endian",
+    "namespace": "temporal-sampling-exploratory-2026-09-20-v1|{analysis}|{repetition}",
+    "analysis_labels": ["order", "simulation"]
+  },
+  "summaries": ["mean_delta_z", "sample_sd_delta_z", "mcse_mean_delta_z", "linear_percentile_2.5_97.5", "mean_back_transformed_rho_C", "mean_back_transformed_rho_F10"],
+  "inference": "descriptive_reference_distributions_no_new_confirmatory_p_values",
+  "comparison_tolerance": {"atol": 1e-12, "rtol": 0.0},
+  "failure_policy": "stop_and_document_no_clipping_no_discarding_no_replacement_runs",
+  "reporting": "all_12_simulation_scenarios_and_all_1000_order_permutations_retained_and_summarized"
+}

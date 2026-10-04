@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Please cite this computational companion and the source datasets when using the code or data."
+type: software
+title: "Temporal Sampling Geometry and Participant-Level Reproducibility in Fixed-Duration Resting EEG"
+version: "2026.10.04"
+authors:
+  - family-names: Cinbat
+    given-names: Alptekin
+  - family-names: Şentürk
+    given-names: Ümit
+  - family-names: Yücedağ
+    given-names: İbrahim
+license: MIT
