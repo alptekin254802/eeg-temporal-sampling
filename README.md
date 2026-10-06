@@ -2,7 +2,9 @@
 
 Computational companion for the study of how temporal placement of equal-duration resting EEG changes the reproducibility of participant ordering. Each sample retains ten 4-s periodograms (40 s) from a common 42-cell support. The measured feature is posterior relative alpha at O1/Oz/O2 after a mean TP9/TP10 reference. Paired samples come from the same recording.
 
-Study registration: [OSF nh4d8](https://osf.io/nh4d8/). Supporting pre-analysis materials: [OSF g2apc](https://osf.io/g2apc/). The project materials are cited as a separate supporting record; their inclusion in the registration snapshot has not been verified. The registered primary, secondary, complete-support and separate replication analyses are distinguished from the exploratory temporal-order control and cell-band-power simulations. The exploratory settings were recorded on 20 September 2026 after the original results were known.
+Study registration: [OSF nh4d8](https://osf.io/nh4d8/). Supporting pre-analysis materials: [OSF g2apc](https://osf.io/g2apc/). We cite the supporting materials separately because we have not verified whether they were included in the archived registration. The primary, secondary, complete-support and replication analyses were preregistered. The temporal-order control, cell-band-power simulations and annotation-exclusion sensitivity are exploratory: we specified the first two on 20 September 2026 and the sensitivity analysis on 5 October 2026, after the primary results were known.
+
+The software is archived under the all-versions DOI [10.5281/zenodo.23145601](https://doi.org/10.5281/zenodo.23145601), which resolves to the latest archived version. See [CITATION.md](CITATION.md) for citation details, including the DOI for version 1.0.1. `release_manifest.json` lists the files and checksums for this copy of the software.
 
 ## Install and check
 
@@ -28,7 +30,7 @@ The first verifier checks release-file identity. The analysis command, without `
 python -B scripts/verify_results.py --full-bootstrap --output outputs/full_bootstrap_checks.json
 ```
 
-The numerical comparison tolerance is absolute `1e-12`, with zero relative tolerance. Array shapes, identifier order, schedule indices and declared input hashes are checked exactly. `release_manifest.json` records snapshot identity; it is separate from scientific reproduction. These commands use the released derived arrays and do not require raw EEG.
+Dimensionless markers and reported contrast arrays use absolute tolerance `1e-12`, with zero relative tolerance. Raw cell powers in V² use relative tolerance `1e-10` and zero absolute tolerance; expected zeros must remain zero. The [computational conventions](docs/COMPUTATIONAL_CONVENTIONS.md) explain the quality-control thresholds, random seeds and checks. Array shapes, identifier order, schedule indices and input hashes must match exactly. The manifest checks file integrity; the analysis commands check numerical agreement. These commands use the released derived arrays and do not require raw EEG.
 
 ## Regenerate figures and numerical tables
 
@@ -38,7 +40,7 @@ python -B scripts/make_exploratory_figures.py --output outputs/exploratory
 python -B scripts/make_tables.py --output outputs/tables
 ```
 
-Outputs are Figures 1-3 and S1-S3 as vector PDF and 600-dpi PNG, a LaTeX version of Table S3, and CSV numerical content for Tables 1-2 and S1-S3. Table 3 contains reporting considerations in the article rather than a computed result. CSV tables expose the numerical values; typography remains part of the article. Regenerated PDF metadata can differ while the plotted content is identical.
+Outputs are Figures 1-3 and S1-S3 as vector PDF and 600-dpi PNG, a LaTeX version of Table S3, and CSV numerical content for Tables 1-2 and S1-S3. Table 3 contains reporting considerations in the article rather than a computed result. CSV tables expose the numerical values; typography remains part of the article. The results for Table S4 are in `results/post_audit_2026-10-05/boundary_sensitivity_summary.json`; use the annotation-sensitivity command below to check them. Regenerated PDF metadata can differ while the plotted content is identical.
 
 Main correlations, contrasts, intervals and MCSE use four decimal places; Table S1 ages use two; exploratory MCSE of a mean uses six. The full-precision table retains machine-readable values for traceability. Participant-bootstrap intervals and descriptive ranges across randomizations/simulated cohorts have different meanings.
 
@@ -65,7 +67,11 @@ The primary computation starts from the hash-identified primary census and sampl
 ```text
 python -B scripts/reproduce_inputs.py --schedule
 python -B scripts/reproduce_inputs.py --primary-root "raw_data/ds005385"
+python -B scripts/reproduce_inputs.py --replication-schedule
+python -B scripts/reproduce_inputs.py --replication-root "raw_data/ds004148" --participants sub-03 sub-43
 ```
+
+The last command checks raw EEG for the two named participants. Omit `--participants` to check all 60 replication recordings. Primary raw quality control requires all 536 structurally eligible files, including the five recordings excluded later. The command lists any missing files before reading the signals. To reconstruct the selection of 536 recordings from the 608-person primary census using metadata and headers, see the [computational conventions](docs/COMPUTATIONAL_CONVENTIONS.md). That check reports agreement with the original census and examines event annotations separately.
 
 Full raw reproduction reads the dataset files and recomputes the empirical bootstrap distributions. The exploratory simulations generate 6000 cohorts in total. Allow substantially more time than for the short checks; computation time depends on CPU, memory and storage. Each analysis command refuses to overwrite existing result files/directories.
 
@@ -92,3 +98,19 @@ The primary data are [Wascher and colleagues, OpenNeuro ds005385 v1.0.3](https:/
 ## License and citation
 
 Analysis software and documentation use the [MIT License](LICENSE). Dataset attribution and scope are described in [DATA_LICENSE.md](DATA_LICENSE.md). For software citation, see [CITATION.cff](CITATION.cff) or [CITATION.md](CITATION.md).
+
+## Exploratory annotation-exclusion sensitivity
+
+We repeated the analysis after excluding the five primary participants whose recordings had additional boundary annotations, leaving 526 participants. This exploratory check uses the same saved measurements and schedules. We recorded the exclusion list and random seed in the [analysis plan](docs/post_audit/boundary_sensitivity_plan_2026-10-05.json) before running this calculation, but after seeing the primary results. To check the supplied result, run:
+
+```text
+python -B scripts/run_boundary_sensitivity.py --check
+```
+
+To recompute the sensitivity analysis from saved measurements, with 526 participants and 5000 bootstrap resamples:
+
+```text
+python -B scripts/run_boundary_sensitivity.py --run --output outputs/boundary_sensitivity
+```
+
+The command runs only this sensitivity analysis from the saved measurements. It does not read raw EEG or rerun the original bootstrap, temporal-order control or simulations. The supplied results are in `results/post_audit_2026-10-05/`. Whether the boundary annotations mark actual interruptions in recording still needs clarification from the data source.

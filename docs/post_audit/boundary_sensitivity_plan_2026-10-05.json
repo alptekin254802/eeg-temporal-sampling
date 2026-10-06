@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "post-audit exploratory sensitivity; specified after original results and before this additional calculation",
+  "planned_at_utc": "2026-10-05T09:12:18.465748+00:00",
+  "purpose": "Assess dependence of the original cohort-level rank contrast on the five included recordings with more than one boundary annotation; not infer whether annotations represent physical acquisition breaks.",
+  "source_results": "results/preregistered/scientific_results.npz",
+  "source_sha256": "f0b0ec15935aa00d8120150e7eea01e59d50e3fb45a83ad63ce6d1aa5f66ae78",
+  "exclude_ids": [
+    "sub-114",
+    "sub-206",
+    "sub-319",
+    "sub-493",
+    "sub-554"
+  ],
+  "selection_rule": "Exclude every originally included participant whose versioned target-recording event metadata contain more than one boundary event. Include the pre-support extra annotation as well; do not choose between alternative exclusion lists after seeing results.",
+  "source_metadata_commit": "6a558cd5852503e66df9ac7fdac2f3a7f4ed5f12",
+  "original_n": 531,
+  "retained_n": 526,
+  "draws": 200,
+  "regime_indices": [
+    0,
+    2
+  ],
+  "retained_schedule": "Exact participant rows of original schedule; no replacement or new temporal draws",
+  "estimand": "Mean over draws of Fisher-transformed across-participant Spearman correlation under ten-stratum distributed sampling minus contiguous sampling",
+  "resamples": 5000,
+  "bootstrap_unit": "participant; same sampled participant vector for both geometries and all draws/arms",
+  "interval": "two-sided 95 percent percentile, NumPy method=linear",
+  "bootstrap_seed_text": "temporal-sampling|boundary-annotation-check|2026-10-05|participant-bootstrap",
+  "bootstrap_seed": 7932202023600012997,
+  "rng": "NumPy default_rng; integers(0,N,size=(5000,N),dtype=int64)",
+  "numerical_failure": "Report and stop, without clipping, replacement or alternative roster",
+  "reporting": "Report N, contrast, percentile interval and separately MCSE; include the result whatever its direction. Original primary, prespecified complete-support, replication and exploratory outputs are unchanged.",
+  "no_new_claim": "No causal decomposition, confirmatory hypothesis, revised registration, new effect threshold or definitive continuity diagnosis"
+}

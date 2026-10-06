@@ -1,0 +1,11 @@
+{
+  "status": "Historical provenance copies; not current execution entry points",
+  "hash_algorithm": "SHA-256",
+  "reference": "osf_upload_package/analysis_specification.yaml: software_validation",
+  "files": {
+    "audit_bids_structure.py": "bfede9ef90a7bdf06bd78029cdc64aaa9d32a6ecd485ac93f446fc5e2db4d1b1",
+    "characterize_sampling_geometry.py": "c8397be9831dc5bde86c57bbe3b2941e3eb07c29c117b31b19440fa28b6a7f60",
+    "finalize_census.py": "5f845daa59a128252c7eac8b96cff0f3b65455649daaa90ecd41aaa05b6175fd",
+    "qc_ds005385.py": "1218339106e0233b512506783e373abb1e1500649e0126d4bcd71c8942dac1c5"
+  }
+}

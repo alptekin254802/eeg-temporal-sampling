@@ -28,3 +28,24 @@ Retain the data and marker companions referenced by each header's `DataFile` and
 The computation reads [8,176) s from O1, Oz, O2, TP9 and TP10 in recordings at least 180 s long. Native rates are 1000 Hz (primary) and 500 Hz (replication). The released estimator applies the common physical spectral grid without filtering or resampling.
 
 The small derived arrays support verification and figure regeneration immediately. Raw EEG is obtained from the versioned data providers. The selected `data/*/participants.tsv` files contain only participant ID, age and source-recorded sex for the analyzed samples. Their source file hashes and selection rules are recorded in `data/metadata_provenance.json`; field meanings and dataset license/attribution are in the adjacent JSON files.
+
+## Further input checks
+
+The [computational conventions](COMPUTATIONAL_CONVENTIONS.md) describe the random
+seeds, quality-control thresholds, sampling strategies and verification commands.
+`reproduce_inputs.py --replication-schedule` reconstructs the eligibility decisions
+for all 60 recordings and the schedules for the 59 included participants.
+`--replication-root` also checks quality-control masks against raw EEG; add
+`--participants` to check raw EEG for selected participants only. Primary raw
+quality control requires all 536 structurally eligible recordings. If any files
+are missing, the command lists them and stops before processing the signals.
+
+`verify_structural_census.py` uses metadata and EDF headers to reconstruct the
+original selection of 536 recordings from 608 participants. It also checks event
+counts and declared onset units. The original `ONLY-INITIAL-BOUNDARY` label was
+based on event types alone, so it does not establish that a recording contains
+only an initial event. These checks leave the original census unchanged; the
+physical meaning of the boundary annotations remains unresolved.
+
+The original scripts are preserved in `provenance/historical_scripts/`. They
+require the original directory layout; use the commands above for this repository.

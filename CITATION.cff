@@ -1,8 +1,9 @@
 cff-version: 1.2.0
-message: "Please cite this software and the source datasets when using the code or data."
+message: "Please use the all-versions DOI to cite this software, or the reference below to cite version 1.0.1."
 type: software
 title: "Temporal Sampling Geometry and Participant-Level Reproducibility in Fixed-Duration Resting EEG"
 repository-code: "https://github.com/alptekin254802/eeg-temporal-sampling"
+doi: "10.5281/zenodo.23145601"
 authors:
   - family-names: Cinbat
     given-names: Alptekin
@@ -11,3 +12,16 @@ authors:
   - family-names: Yücedağ
     given-names: İbrahim
 license: MIT
+references:
+  - type: software
+    title: "Temporal Sampling Geometry and Participant-Level Reproducibility in Fixed-Duration Resting EEG"
+    version: "1.0.1"
+    doi: "10.5281/zenodo.23146476"
+    repository-code: "https://github.com/alptekin254802/eeg-temporal-sampling/tree/v1.0.1"
+    authors:
+      - family-names: Cinbat
+        given-names: Alptekin
+      - family-names: Şentürk
+        given-names: Ümit
+      - family-names: Yücedağ
+        given-names: İbrahim

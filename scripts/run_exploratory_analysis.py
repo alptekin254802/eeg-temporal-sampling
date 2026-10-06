@@ -7,6 +7,7 @@ import numpy as np
 from exploratory_sampling import (arm_markers,cell_band_powers,permuted_powers,rank_summary,
     scenarios,simulation_powers,summarize_repetitions)
 from preregistered_analysis import compute_cell_periodograms
+from verification_tolerances import assert_cell_powers_close
 from run_preregistered_analysis import _load_required_support,file_digest,validate_registered_inputs
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -53,7 +54,7 @@ def main():
             frequency,psd=compute_cell_periodograms(data,fs)
             new.append(cell_band_powers(psd,frequency))
             if (i+1)%50==0: print('Cell powers',i+1,'/516',flush=True)
-        np.testing.assert_allclose(new,powers,atol=1e-12,rtol=0)
+        assert_cell_powers_close(new,powers)
         powers=np.asarray(new)
         cache=args.output/'cell_band_powers.npz'
         np.savez_compressed(cache,participant_ids=ids,schedule=schedule,cell_band_powers=powers)

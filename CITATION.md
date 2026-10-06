@@ -1,6 +1,12 @@
 # Citation
 
-Cinbat, A., Şentürk, Ü., & Yücedağ, İ. (2026). *Temporal Sampling Geometry and Participant-Level Reproducibility in Fixed-Duration Resting EEG* [Software]. GitHub. https://github.com/alptekin254802/eeg-temporal-sampling
+Use the all-versions DOI for a general citation of the software. It resolves to the latest archived version.
+
+Cinbat, A., Şentürk, Ü., & Yücedağ, İ. (2026). *Temporal Sampling Geometry and Participant-Level Reproducibility in Fixed-Duration Resting EEG* [Software]. Zenodo. https://doi.org/10.5281/zenodo.23145601
+
+Source code: https://github.com/alptekin254802/eeg-temporal-sampling
+
+To cite **v1.0.1**, use its version-specific DOI: [10.5281/zenodo.23146476](https://doi.org/10.5281/zenodo.23146476). Its source is available at [tag v1.0.1](https://github.com/alptekin254802/eeg-temporal-sampling/tree/v1.0.1). `release_manifest.json` lists the files and checksums for this copy of the software.
 
 Please also cite the source datasets when using their data:
 

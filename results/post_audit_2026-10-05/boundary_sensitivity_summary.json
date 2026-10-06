@@ -1,0 +1,30 @@
+{
+  "status": "post-audit exploratory sensitivity; specified after original results and before this additional calculation",
+  "plan_sha256": "c7eac5aa4cf5106499e56e0f932fb05083be546f9f73a420a36de287171f0d47",
+  "source_sha256": "f0b0ec15935aa00d8120150e7eea01e59d50e3fb45a83ad63ce6d1aa5f66ae78",
+  "n": 526,
+  "excluded_ids": [
+    "sub-114",
+    "sub-206",
+    "sub-319",
+    "sub-493",
+    "sub-554"
+  ],
+  "draws": 200,
+  "delta_z_F10_minus_C": 0.29901113129106244,
+  "percentile_95_interval": [
+    0.2414123367227983,
+    0.3495496512767094
+  ],
+  "monte_carlo_standard_error": 0.004054837698003038,
+  "participant_rank_reproducibility": {
+    "C": 0.9326222092010044,
+    "F10": 0.9623786103087777
+  },
+  "bootstrap_resamples": 5000,
+  "bootstrap_seed": 7932202023600012997,
+  "bootstrap_indices_sha256": "a555277c7a41d0ef1b210479d16e07454fc3476764d222c246fe196ccfdd7dfa",
+  "original_results_changed": false,
+  "raw_EEG_recomputed": false,
+  "physical_continuity_established": false
+}
