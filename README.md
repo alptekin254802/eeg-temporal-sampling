@@ -6,6 +6,8 @@ Study registration: [OSF nh4d8](https://osf.io/nh4d8/). Supporting pre-analysis 
 
 The software is archived under the all-versions DOI [10.5281/zenodo.23145601](https://doi.org/10.5281/zenodo.23145601), which resolves to the latest archived version. See [CITATION.md](CITATION.md) for citation details, including the DOI for version 1.0.1. `release_manifest.json` lists the files and checksums for this copy of the software.
 
+This is version **1.0.2** of the accompanying software.
+
 ## Install and check
 
 Run commands from this directory. The reference environment uses CPython 3.14.3 and the package versions in `requirements.txt`. Creating a virtual environment is recommended:
@@ -40,7 +42,7 @@ python -B scripts/make_exploratory_figures.py --output outputs/exploratory
 python -B scripts/make_tables.py --output outputs/tables
 ```
 
-Outputs are Figures 1-3 and S1-S3 as vector PDF and 600-dpi PNG, a LaTeX version of Table S3, and CSV numerical content for Tables 1-2 and S1-S3. Table 3 contains reporting considerations in the article rather than a computed result. CSV tables expose the numerical values; typography remains part of the article. The results for Table S4 are in `results/post_audit_2026-10-05/boundary_sensitivity_summary.json`; use the annotation-sensitivity command below to check them. Regenerated PDF metadata can differ while the plotted content is identical.
+Outputs are Figures 1-3 and S1-S3 as vector PDF and 600-dpi PNG, a LaTeX version of Table S3, and CSV numerical content for Tables 1-2 and S1-S4. Table 3 contains reporting considerations in the article rather than a computed result. CSV tables expose the numerical values; typography remains part of the article. Table S4 includes the annotation-exclusion sensitivity alongside the primary and complete-support results. Its source is `results/post_audit_2026-10-05/boundary_sensitivity_summary.json`; the command below checks that result. Regenerated PDF metadata can differ while the plotted content is identical.
 
 Main correlations, contrasts, intervals and MCSE use four decimal places; Table S1 ages use two; exploratory MCSE of a mean uses six. The full-precision table retains machine-readable values for traceability. Participant-bootstrap intervals and descriptive ranges across randomizations/simulated cohorts have different meanings.
 
@@ -87,6 +89,11 @@ Full raw reproduction reads the dataset files and recomputes the empirical boots
 | `results/exploratory_2026-09-20/` | Cell-power cache and all reported exploratory repetitions/summaries |
 | `data/` | Public age/sex fields for the analyzed participants, field definitions and source provenance |
 | `docs/exploratory/analysis_plan_2026-09-20.json` | Executed exploratory model, grid, counts and RNG specification |
+| `results/post_audit_2026-10-05/` | Results of the exploratory annotation-exclusion sensitivity |
+| `docs/post_audit/` | Plan recorded before calculating that sensitivity analysis |
+| `docs/COMPUTATIONAL_CONVENTIONS.md` | Sampling, QC, random seeds and comparison rules |
+| `provenance/historical_scripts/` | Original input-preparation scripts and their checksums |
+| `CHANGELOG.md` | Notes on the software versions |
 | `release_manifest.json` | File identities and sizes for this computational snapshot |
 
 Dataset participant identifiers are the source repositories' pseudonymous IDs. `data/metadata_provenance.json` identifies the source participant files and selection used for Table S1. The literal `AUX004` in the sampling seed namespace is required to reproduce the primary sampling schedule. The identifier `absolute_displacement` refers to the **signed** difference between ten-stratum distributed sampling and contiguous sampling on the logit scale; no absolute-value transformation is applied.

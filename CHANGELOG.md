@@ -1,8 +1,10 @@
 # Software versions
 
-## Current changes
+## Version 1.0.2
 
-This update adds an exploratory sensitivity analysis that excludes recordings with additional boundary annotations. It also adds checks for the structural census, replication sampling schedules and raw-input quality control. The preregistered and exploratory temporal-order analyses remain available. `release_manifest.json` lists the files and checksums for this version.
+This version adds the exploratory sensitivity analysis that excludes recordings with additional boundary annotations. It also includes checks for the structural census, replication schedules and raw-data quality control, together with the original input-preparation scripts.
+
+The table export now includes Table S4. Sensitivity checks allow small floating-point rounding differences while requiring participant IDs, sample sizes, seeds and hashes to match exactly. The reported estimates and existing figures are unchanged.
 
 ## Archived version 1.0.1
 

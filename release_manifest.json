@@ -36,16 +36,28 @@
       "sha256": "5ab05f548328863dd73c057cc6bde305fc62a87522b3f28eadb9bbdd3b1409be"
     },
     "CHANGELOG.md": {
-      "bytes": 696,
-      "sha256": "ba4614c1b4770ad41e4ed510f3d87878bcd62fb54575629651fda990ed9b46aa"
+      "bytes": 847,
+      "sha256": "51f346707ea0ed73280a79768a2e9cae2567fbbd880e8072defb5da3bcd86f7a"
     },
     "CITATION.cff": {
-      "bytes": 1040,
-      "sha256": "5289526c214d6d6930e432885ff4209b866d4f56e7fdc4e6aa87693692000856"
+      "bytes": 1087,
+      "sha256": "e9bf04ff3b8c72e9569920a209af62044be00206b2119c8e3e4857a94cb226c5"
     },
     "CITATION.md": {
-      "bytes": 1034,
-      "sha256": "fdb393893d08048f1ea8f4ecb8151586978edf70368e2fb897657808215581f5"
+      "bytes": 1154,
+      "sha256": "cd3f824d21f99a92564494ab4830e3ac4f85020cead5709322337e2c76952510"
+    },
+    "DATA_LICENSE.md": {
+      "bytes": 851,
+      "sha256": "100ccfe1317da1912f4501635939484a175c3f4a3adabbe3b7cb21a5177766b6"
+    },
+    "LICENSE": {
+      "bytes": 1068,
+      "sha256": "ff54d3fa03d2de1304d917c97984c34246f477b9e9bac0acdc85a43ab5af0cb3"
+    },
+    "README.md": {
+      "bytes": 11266,
+      "sha256": "d7958b8d0771470ef6d467f6ddfa67035ca647fddc4a47eca79e5e661aa1e526"
     },
     "data/ds004148/dataset_description.json": {
       "bytes": 727,
@@ -75,13 +87,9 @@
       "bytes": 903,
       "sha256": "22672abbe2941e3ff033a15e7d42670e4638ded764a5df388ba6e7ae17676244"
     },
-    "DATA_LICENSE.md": {
-      "bytes": 851,
-      "sha256": "100ccfe1317da1912f4501635939484a175c3f4a3adabbe3b7cb21a5177766b6"
-    },
     "docs/COMPUTATIONAL_CONVENTIONS.md": {
-      "bytes": 10354,
-      "sha256": "faa0f6ee614bc65df18d7aa092ff00362c06fd9dae9c0e86533eb4bf95cacb08"
+      "bytes": 10624,
+      "sha256": "cf06c55305fcff7c19ac86c700e803e09b33cabcd333a1bbae8912a0292f3d01"
     },
     "docs/DATA_ACCESS.md": {
       "bytes": 4239,
@@ -95,17 +103,13 @@
       "bytes": 2307,
       "sha256": "c7eac5aa4cf5106499e56e0f932fb05083be546f9f73a420a36de287171f0d47"
     },
-    "LICENSE": {
-      "bytes": 1068,
-      "sha256": "ff54d3fa03d2de1304d917c97984c34246f477b9e9bac0acdc85a43ab5af0cb3"
+    "osf_upload_package/DS005385_PARTICIPANT_CENSUS.csv": {
+      "bytes": 262046,
+      "sha256": "90f425ba446daac8db3daa73e23035d4a6e9f6efc3a232671efad16cdfd04c82"
     },
     "osf_upload_package/analysis_specification.yaml": {
       "bytes": 8697,
       "sha256": "b01b98a0c03f6c36b1230d13ce88b1fe41bea897460f30e0f123cd38d60b5455"
-    },
-    "osf_upload_package/DS005385_PARTICIPANT_CENSUS.csv": {
-      "bytes": 262046,
-      "sha256": "90f425ba446daac8db3daa73e23035d4a6e9f6efc3a232671efad16cdfd04c82"
     },
     "osf_upload_package/scripts/sampling_design.py": {
       "bytes": 4486,
@@ -123,6 +127,14 @@
       "bytes": 4270,
       "sha256": "cd6c87250b08a647814867e67f800d9c208ec66f78ae53b35d260d0352a3287a"
     },
+    "provenance/historical_scripts/README.md": {
+      "bytes": 1060,
+      "sha256": "0d667523cb25e9710d51b9a1b5e3604b35f3223cf119ded587a868f37a85dc69"
+    },
+    "provenance/historical_scripts/SHA256.json": {
+      "bytes": 620,
+      "sha256": "890b67a795d5a80aa16fd03d4d318284bcb5bc45c2c8255eb43dd99ebb63f50f"
+    },
     "provenance/historical_scripts/audit_bids_structure.py": {
       "bytes": 11823,
       "sha256": "bfede9ef90a7bdf06bd78029cdc64aaa9d32a6ecd485ac93f446fc5e2db4d1b1"
@@ -138,18 +150,6 @@
     "provenance/historical_scripts/qc_ds005385.py": {
       "bytes": 8195,
       "sha256": "1218339106e0233b512506783e373abb1e1500649e0126d4bcd71c8942dac1c5"
-    },
-    "provenance/historical_scripts/README.md": {
-      "bytes": 1060,
-      "sha256": "0d667523cb25e9710d51b9a1b5e3604b35f3223cf119ded587a868f37a85dc69"
-    },
-    "provenance/historical_scripts/SHA256.json": {
-      "bytes": 620,
-      "sha256": "890b67a795d5a80aa16fd03d4d318284bcb5bc45c2c8255eb43dd99ebb63f50f"
-    },
-    "README.md": {
-      "bytes": 10716,
-      "sha256": "af5f6ee1d86e37ed34d3a976e15fedc3f272cda72ff7ea9eaaec526d01099f23"
     },
     "requirements.txt": {
       "bytes": 58,
@@ -208,8 +208,8 @@
       "sha256": "29f4ee3e40939d9f19ece55bea0d215c80c4ee30962697a84b1b33db15ba65ca"
     },
     "scripts/make_tables.py": {
-      "bytes": 5981,
-      "sha256": "78eea210b07f9d088ab1137143328e02d1b8233dccc5e7f5317db3d2ee4563f9"
+      "bytes": 6927,
+      "sha256": "ddbc09f73a41e0b1e9e3d93203d7f5235f39c4916f850124c46200c78c9cb6a0"
     },
     "scripts/preregistered_analysis.py": {
       "bytes": 17250,
@@ -220,8 +220,8 @@
       "sha256": "1827fd9aa2a094d5c8c32aac39ad4ab39a8d1d80060298ff073426f765506f9a"
     },
     "scripts/run_boundary_sensitivity.py": {
-      "bytes": 5795,
-      "sha256": "e214866af4f279a4588cafcf43ea25000a4830e2af3c76f1f1fa93820f8af016"
+      "bytes": 5811,
+      "sha256": "12a036a5fc6d9e5ca68a27c2f6a3095a94e68831d5e4ebbc0508379d50820cfb"
     },
     "scripts/run_exploratory_analysis.py": {
       "bytes": 5687,
@@ -236,8 +236,8 @@
       "sha256": "d55ebefd87d32fee3ed48cbd45fabc3991041d1985792f60d7bcd0a6f9d0f445"
     },
     "scripts/verification_tolerances.py": {
-      "bytes": 1093,
-      "sha256": "dde1f27c27f20f97803d321077c41fbb6067e80f0443cac707836df537e529db"
+      "bytes": 2434,
+      "sha256": "f18eb9f322b5f8961b354f69e0892a00ac50413c2c97030a603f7532bdad0b10"
     },
     "scripts/verify_release.py": {
       "bytes": 811,
@@ -270,15 +270,20 @@
     "tests/test_psd_equivalence.py": {
       "bytes": 4270,
       "sha256": "cd6c87250b08a647814867e67f800d9c208ec66f78ae53b35d260d0352a3287a"
+    },
+    "tests/test_summary_verification.py": {
+      "bytes": 3057,
+      "sha256": "210e6980857e7d0974bbd4e6d5cc316981c68259b6a59606e4b02b6dd3084399"
     }
   },
-  "updated_utc": "2026-10-05T13:29:33.139810+00:00",
+  "updated_utc": "2026-10-06T22:53:16.703494+00:00",
   "supporting_project": "https://osf.io/g2apc/",
-  "release_status": "working-tree snapshot accompanying the manuscript",
+  "release_status": "version 1.0.2",
   "archived_base": {
     "version": "1.0.1",
     "git_commit": "45b55df7089ab0bcd12249ec53c7efce7ef1d17a",
     "doi": "10.5281/zenodo.23146476"
   },
-  "concept_doi": "10.5281/zenodo.23145601"
+  "concept_doi": "10.5281/zenodo.23145601",
+  "version": "1.0.2"
 }

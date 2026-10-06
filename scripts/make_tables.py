@@ -1,4 +1,4 @@
-"""Export numerical content of Tables 1-2 and S1-S3 from released inputs."""
+"""Export numerical content of Tables 1-2 and S1-S4 from released inputs."""
 import argparse
 import csv
 import json
@@ -71,5 +71,20 @@ def main():
             rho_C=f"{r['mean_rho_C']:.4f}",rho_F10=f"{r['mean_rho_F10']:.4f}",delta_z=f"{r['mean_delta_z']:.4f}",SD=f"{r['sample_sd_delta_z']:.4f}",
             central_range_lower=f"{r['central_95_range'][0]:.4f}",central_range_upper=f"{r['central_95_range'][1]:.4f}",MCSE_of_mean=f"{r['mcse_mean_delta_z']:.6f}"))
     write(args.output/'tableS3_simulations.csv',rows)
-    print('Wrote five numerical tables to',args.output)
+    sensitivity=json.loads((ROOT/'results/post_audit_2026-10-05/boundary_sensitivity_summary.json').read_text('utf-8'))
+    rows=[]
+    for name,record,n in [
+        ('Primary',summary['PRIMARY'],summary['PRIMARY']['participant_n']),
+        ('Prespecified complete support',summary['PRESPECIFIED_SENSITIVITY'],summary['PRESPECIFIED_SENSITIVITY']['participant_n']),
+        ('Exploratory annotation exclusion',sensitivity,sensitivity['n']),
+    ]:
+        rho=record['participant_rank_reproducibility']
+        rows.append(dict(analysis=name,N=n,
+            delta_z=f"{record['delta_z_F10_minus_C']:.4f}",
+            interval_lower=f"{record['percentile_95_interval'][0]:.4f}",
+            interval_upper=f"{record['percentile_95_interval'][1]:.4f}",
+            MCSE=f"{record['monte_carlo_standard_error']:.4f}",
+            rho_C=f"{rho['C']:.4f}",rho_F10=f"{rho['F10']:.4f}"))
+    write(args.output/'tableS4_boundary_sensitivity.csv',rows)
+    print('Wrote six numerical tables to',args.output)
 if __name__=='__main__':main()

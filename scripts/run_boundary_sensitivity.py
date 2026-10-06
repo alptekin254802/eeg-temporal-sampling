@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import numpy as np
 from preregistered_analysis import primary_contrast_statistics, primary_bootstrap_distribution, percentile_interval
+from verification_tolerances import assert_summary_close
 
 ROOT = Path(__file__).resolve().parents[1]
 PLAN = ROOT / 'docs/post_audit/boundary_sensitivity_plan_2026-10-05.json'
@@ -71,9 +72,8 @@ def main():
             selected = np.array([0, 2499, 4999])
             np.testing.assert_allclose(primary_bootstrap_distribution(values, indices[selected]), z['bootstrap_delta_z'][selected], atol=1e-12, rtol=0)
             actual = record(plan, ids, point, z['bootstrap_delta_z'], indices)
-        if actual != expected:
-            raise ValueError('Stored sensitivity summary differs')
-        print(json.dumps({'status': 'PASS', 'scope': 'post-audit sensitivity summary and selected bootstrap replay', 'selected_resamples': selected.tolist(), 'plan_sha256': PLAN_SHA256}, indent=2))
+        assert_summary_close(actual, expected)
+        print(json.dumps({'status': 'PASS', 'scope': 'annotation-exclusion sensitivity summary and selected bootstrap replay', 'selected_resamples': selected.tolist(), 'plan_sha256': PLAN_SHA256}, indent=2))
         return
     if args.output.exists() and any(args.output.iterdir()):
         raise FileExistsError('Choose a new empty output directory')

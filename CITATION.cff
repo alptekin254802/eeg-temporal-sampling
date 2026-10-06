@@ -4,6 +4,8 @@ type: software
 title: "Temporal Sampling Geometry and Participant-Level Reproducibility in Fixed-Duration Resting EEG"
 repository-code: "https://github.com/alptekin254802/eeg-temporal-sampling"
 doi: "10.5281/zenodo.23145601"
+version: "1.0.2"
+date-released: "2026-10-07"
 authors:
   - family-names: Cinbat
     given-names: Alptekin

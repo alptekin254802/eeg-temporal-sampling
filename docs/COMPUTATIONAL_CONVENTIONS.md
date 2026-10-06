@@ -94,7 +94,9 @@ and have identical dimensions. An expected zero must remain exactly zero;
 positive values use the same relative tolerance regardless of their size.
 Checking powers directly matters because a common scale error in alpha and total
 power could cancel in their ratio. Dimensionless markers and reported
-contrast arrays retain their separately specified absolute tolerance `1e-12`.
+contrast arrays and floating-point sensitivity summaries use absolute tolerance
+`1e-12`, with zero relative tolerance. Summary fields such as sample sizes, seeds,
+participant IDs and hashes still require exact agreement.
 Integer schedules, masks and participant ordering require exact equality.
 File hashes check for identical bytes; numerical results and rendered figures
 need separate comparisons.
@@ -107,8 +109,10 @@ mean cell centers, summarized over participant-by-draw pairs. An arm's temporal
 span is `4*(max_index-min_index+1)`, including gaps, summarized over both arms of
 every pair. Symmetric nearest separation averages the ten nearest-center
 distances from the first arm to the second and the ten reverse distances, then
-summarizes the resulting value per pair. Means, medians, and 2.5th/97.5th
-percentiles pool these observations; quantiles use linear interpolation.
+summarizes the resulting value per pair. The manuscript and table export report
+pooled means. The archived geometry script also calculated medians and
+2.5th/97.5th percentiles using linear interpolation; those additional summaries
+are not part of the manuscript tables.
 Cross-stratum adjacency records consecutive selected indices belonging to
 different strata. The paired-draw fraction counts either arm; the arm fraction
 uses twice as many observations.
